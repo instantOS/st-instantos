@@ -15,8 +15,8 @@ options:
 	@echo "LDFLAGS = $(STLDFLAGS)"
 	@echo "CC      = $(CC)"
 
-config.h:
-	cp config.def.h config.h
+config.h: config.def.h
+	cp $< $@
 
 .c.o:
 	$(CC) $(STCFLAGS) -c $<
@@ -29,7 +29,7 @@ boxdraw.o: config.h st.h boxdraw_data.h
 $(OBJ): config.h config.mk
 
 st: $(OBJ)
-	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
+	$(CC) -o $@ $^ $(STLDFLAGS)
 
 clean:
 	rm -f st $(OBJ) st-$(VERSION).tar.gz
