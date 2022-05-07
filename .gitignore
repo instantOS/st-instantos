@@ -3,3 +3,5 @@ st
 config.h
 tags
 .nvimlog
+
+.direnv/
