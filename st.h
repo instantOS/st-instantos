@@ -136,3 +136,5 @@ extern unsigned int defaultfg;
 extern unsigned int defaultbg;
 extern float alpha;
 extern const int boxdraw, boxdraw_bold, boxdraw_braille;
+void kscrolldown(const Arg *);
+void kscrollup(const Arg *);
