@@ -1,5 +1,4 @@
 st
 *.o
-config.h
 tags
 .nvimlog
